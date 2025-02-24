@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>如何在网页 B 中嵌入网页 A 的内容</title>
-      <link href="/posts/2013454d.html"/>
-      <url>/posts/2013454d.html</url>
-      
-        <content type="html"><![CDATA[<h1>如何在网页 B 中嵌入网页 A 的内容</h1><p>要将网页 A 的内容嵌入到网页 B 中，可以使用 HTML 的 <code>&lt;iframe&gt;</code> 标签。以下是具体的实现步骤和代码示例：</p><h2 id="步骤">步骤</h2><ol><li>在网页 B 的 HTML 代码中插入 <code>&lt;iframe&gt;</code> 标签。</li><li>将 <code>&lt;iframe&gt;</code> 的 <code>src</code> 属性设置为网页 A 的 URL（<code>https://lxttz.github.io/</code>）。</li><li>根据需要调整 <code>width</code>、<code>height</code> 等属性，以确保嵌入内容显示正常。</li></ol><h2 id="代码示例">代码示例</h2><pre><code class="language-html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-CN&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;网页 B&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;h1&gt;这是网页 B&lt;/h1&gt;    &lt;p&gt;下面是网页 A 的内容：&lt;/p&gt;    &lt;!-- 使用 iframe 嵌入网页 A --&gt;    &lt;iframe src=&quot;https://lxttz.github.io/&quot; width=&quot;100%&quot; height=&quot;500px&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> html </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>阿洛学长的博客搭建笔记</title>
       <link href="/posts/2013454d.html"/>
       <url>/posts/2013454d.html</url>
