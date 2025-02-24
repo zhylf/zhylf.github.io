@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lxttz.github.io/life/music/index.html</loc>
+    
+    <lastmod>2025-02-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lxttz.github.io/posts/f980a5d5.html</loc>
     
-    <lastmod>2025-02-23</lastmod>
+    <lastmod>2025-02-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -75,15 +84,6 @@
   
   <url>
     <loc>https://lxttz.github.io/personal/about/index.html</loc>
-    
-    <lastmod>2025-02-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lxttz.github.io/life/music/index.html</loc>
     
     <lastmod>2025-02-21</lastmod>
     
