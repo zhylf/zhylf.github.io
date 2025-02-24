@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lxttz.github.io/box/animation/index.html</loc>
+    
+    <lastmod>2025-02-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lxttz.github.io/life/music/index.html</loc>
     
     <lastmod>2025-02-24</lastmod>
@@ -11,9 +20,9 @@
   </url>
   
   <url>
-    <loc>https://lxttz.github.io/posts/f980a5d5.html</loc>
+    <loc>https://lxttz.github.io/posts/2013454d.html</loc>
     
-    <lastmod>2025-02-24</lastmod>
+    <lastmod>2025-02-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -137,15 +146,6 @@
   </url>
   
   <url>
-    <loc>https://lxttz.github.io/box/animation/index.html</loc>
-    
-    <lastmod>2025-02-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lxttz.github.io/posts/2013454d.html</loc>
     
     <lastmod>2022-10-23</lastmod>
@@ -173,6 +173,20 @@
 
   
   <url>
+    <loc>https://lxttz.github.io/tags/hexo/</loc>
+    <lastmod>2025-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lxttz.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2025-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://lxttz.github.io/tags/Markdown/</loc>
     <lastmod>2025-02-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -187,6 +201,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>https://lxttz.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://lxttz.github.io/categories/%E6%BC%94%E7%A4%BA/</loc>
