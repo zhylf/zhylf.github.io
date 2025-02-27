@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lxttz.github.io/box/animation/index.html</loc>
+    
+    <lastmod>2025-02-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lxttz.github.io/posts/55a7f856.html</loc>
     
     <lastmod>2025-02-27</lastmod>
@@ -86,15 +95,6 @@
     <loc>https://lxttz.github.io/personal/about/index.html</loc>
     
     <lastmod>2025-02-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lxttz.github.io/box/animation/index.html</loc>
-    
-    <lastmod>2025-02-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
