@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>GitHub获取个人访问令牌（PAT）</title>
+      <link href="/posts/671aa288.html"/>
+      <url>/posts/671aa288.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="🤖-Assistant"><a href="#🤖-Assistant" class="headerlink" title="🤖 Assistant"></a>🤖 Assistant</h3><h1 id="🔑-GitHub-获取个人访问令牌（PAT）全流程指南"><a href="#🔑-GitHub-获取个人访问令牌（PAT）全流程指南" class="headerlink" title="🔑 GitHub 获取个人访问令牌（PAT）全流程指南"></a>🔑 GitHub 获取个人访问令牌（PAT）全流程指南</h1><h2 id="🌐-1-登录-GitHub-账户"><a href="#🌐-1-登录-GitHub-账户" class="headerlink" title="🌐 1. 登录 GitHub 账户"></a>🌐 1. 登录 GitHub 账户</h2><ul><li>访问 <a href="https://github.com/">GitHub 官网</a> </li><li>👉 点击右上角 “Sign in” 登录账户</li><li>🔒 推荐开启两步验证（<a href="https://github.com/settings/security">设置路径</a>）</li></ul><h2 id="⚙️-2-进入开发者设置"><a href="#⚙️-2-进入开发者设置" class="headerlink" title="⚙️ 2. 进入开发者设置"></a>⚙️ 2. 进入开发者设置</h2><ol><li>点击右上角头像 → <strong>Settings</strong></li><li>左侧导航栏定位 → <strong>Developer settings</strong></li><li>选择 ▶️ <strong>Personal access tokens</strong> → <strong>Tokens (classic)</strong></li></ol><h2 id="🛠️-3-创建新令牌"><a href="#🛠️-3-创建新令牌" class="headerlink" title="🛠️ 3. 创建新令牌"></a>🛠️ 3. 创建新令牌</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    A[开始] --&gt; B[命名令牌]</span><br><span class="line">    B --&gt; C[设置有效期]</span><br><span class="line">    C --&gt; D[配置权限]</span><br><span class="line">    D --&gt; E[生成令牌]</span><br></pre></td></tr></table></figure><h2 id="🔐-4-核心参数配置（带图标说明）"><a href="#🔐-4-核心参数配置（带图标说明）" class="headerlink" title="🔐 4. 核心参数配置（带图标说明）"></a>🔐 4. 核心参数配置（带图标说明）</h2><div class="table-container"><table><thead><tr><th>配置项</th><th>选项说明</th><th>推荐设置</th></tr></thead><tbody><tr><td><strong>🔖 名称</strong></td><td>识别用途的标识名称</td><td><code>gicnuo_2024PAT</code></td></tr><tr><td><strong>📅 有效期</strong></td><td>最长可设置365天</td><td>选择自定义日期</td></tr><tr><td><strong>📂 仓库权限</strong></td><td><code>repo</code>全库或指定库</td><td>✅ 全库访问</td></tr><tr><td><strong>👥 账户权限</strong></td><td><code>user</code>可操作账户设置</td><td>❌ 默认关闭</td></tr></tbody></table></div><h3 id="权限详细说明"><a href="#权限详细说明" class="headerlink" title="权限详细说明"></a>权限详细说明</h3><ul><li><strong>repo</strong>（必选）<ul><li>✅ <code>repo:status</code>  </li><li>✅ <code>repo_deployment</code></li><li>✅ <code>public_repo</code>（公开库访问）</li></ul></li><li><strong>admin</strong>（高危操作）<ul><li>❗ <code>repo:delete</code>（删除仓库权限）</li><li>❗ <code>admin:org</code>（组织管理权限）</li></ul></li></ul><h2 id="⚠️-5-令牌安全警告"><a href="#⚠️-5-令牌安全警告" class="headerlink" title="⚠️ 5. 令牌安全警告"></a>⚠️ 5. 令牌安全警告</h2><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- 生成后应立即保存至密码管理器！</span></span><br><span class="line"><span class="deletion">- 泄露的令牌可能导致账户被完全控制！</span></span><br><span class="line"><span class="addition">+ 建议使用1Password/Bitwarden等工具加密存储</span></span><br></pre></td></tr></table></figure><h2 id="📋-6-使用场景示例"><a href="#📋-6-使用场景示例" class="headerlink" title="📋 6. 使用场景示例"></a>📋 6. 使用场景示例</h2><div class="table-container"><table><thead><tr><th>使用场景</th><th>CLI命令示例</th><th>权限要求</th></tr></thead><tbody><tr><td>克隆私有库</td><td><code>git clone https://&lt;TOKEN&gt;@github.com/user/repo.git</code></td><td>repo</td></tr><tr><td>API调用</td><td><code>curl -H &quot;Authorization: Bearer &lt;TOKEN&gt;&quot; https://api.github.com/user</code></td><td>user</td></tr><tr><td>CI/CD集成</td><td>在GitHub Actions中设为<code>secrets.GH_TOKEN</code></td><td>repo + workflow</td></tr></tbody></table></div><h2 id="🔄-7-管理令牌方法"><a href="#🔄-7-管理令牌方法" class="headerlink" title="🔄 7. 管理令牌方法"></a>🔄 7. 管理令牌方法</h2><ol><li><strong>禁用令牌</strong>：开发者设置中点击令牌右侧的🔄按钮</li><li><strong>监控日志</strong>：<a href="https://github.com/settings/security-log">审计日志查看</a></li><li><strong>紧急撤销</strong>：进入页面立即点击❌撤销按钮</li></ol><blockquote><p>💡 TIPS：结合<a href="https://cli.github.com/">GitHub CLI</a> 使用更安全：<br><code>gh auth login --with-token &lt; mytoken.txt</code></p></blockquote><h2 id="流程图解全流程"><a href="#流程图解全流程" class="headerlink" title="流程图解全流程"></a>流程图解全流程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    用户-&gt;&gt;GitHub: 登录账户</span><br><span class="line">    用户-&gt;&gt;GitHub: 进入开发者设置</span><br><span class="line">    GitHub--&gt;&gt;用户: 显示PAT创建界面</span><br><span class="line">    用户-&gt;&gt;GitHub: 配置令牌参数</span><br><span class="line">    GitHub--&gt;&gt;用户: 生成加密令牌</span><br><span class="line">    用户-&gt;&gt;本地: 保存至安全位置</span><br></pre></td></tr></table></figure><p><strong><a href="#-github-获取个人访问令牌pat全流程指南">⬆️ 返回顶部</a></strong><br><strong><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">📚 官方文档参考</a></strong><br>``` </p><blockquote><p>✨ 最佳实践建议：  </p><ul><li>为不同用途创建独立令牌（如<code>CI_PAT</code>/<code>API_PAT</code>）  </li><li>定期使用<a href="https://github.com/github/token-scan">GitHub Token Scanner</a>检查代码中的令牌泄露  </li><li>企业用户建议使用<a href="https://docs.github.com/en/developers/apps/getting-started-with-apps/about-apps">OAuth Apps</a>代替PAT</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> GitHub技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ai话术指南</title>
+      <link href="/posts/5a4cdc93.html"/>
+      <url>/posts/5a4cdc93.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="ai话术"><a href="#ai话术" class="headerlink" title="ai话术"></a>ai话术</h1><h2 id="1-爬取网址内容"><a href="#1-爬取网址内容" class="headerlink" title="1.爬取网址内容"></a>1.爬取网址内容</h2><p>网址+将该网页的内容拷贝下来，整理总结最后以markdown的文件格式输出</p><h2 id="2-梳理内容笔记"><a href="#2-梳理内容笔记" class="headerlink" title="2.梳理内容笔记"></a>2.梳理内容笔记</h2><p>整理以上最后以markdown的文件格式输出，加上每一给平台的网址，标题加上一些小图标</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ai </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai话术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>免费好用的网站托管平台全面对比</title>
       <link href="/posts/78b95e04.html"/>
       <url>/posts/78b95e04.html</url>
